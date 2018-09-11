@@ -3,7 +3,6 @@ const _ = require("lodash");
 const mkdirp = require("mkdirp");
 const path = require("path");
 const process = require("process");
-const packageJson = require("../package.json");
 
 module.exports = class extends Generator {
   prompting() {
@@ -71,7 +70,7 @@ module.exports = class extends Generator {
         useSass: answers.useSass,
         sassLibraryPkg: false,
         sassLibraryPath: false,
-        generatorRhelementVersion: packageJson.version
+        generatorRhelementVersion: 'test'
       };
 
       if (answers.useSass) {
